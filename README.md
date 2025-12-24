@@ -2,6 +2,16 @@
 
 A Named Entity Recognition system built with spaCy for extracting and parsing information from resumes.
 
+## ⚠️ Important Notice
+
+**This is a demonstration/learning project.** The pre-trained model included in this repository was trained on a specific resume dataset and is optimized for that particular data structure and format. 
+
+**Key Points:**
+- The model may not work accurately on different resume formats or datasets
+- For production use, you should retrain the model with your own labeled resume data
+- This project serves as a template and learning resource for building custom NER systems
+- The training scripts and methodology can be adapted to your specific use case
+
 ## Overview
 
 This project implements a custom NER model trained on resume data to extract relevant entities such as names, emails, skills, experiences, and other resume-specific information.
@@ -19,7 +29,6 @@ This project implements a custom NER model trained on resume data to extract rel
 ```
 .
 ├── resume_ner_model/          # Trained NER model
-├── resumes/                   # Resume data
 ├── train_ner_model.py         # Script to train the NER model
 ├── resume_parser.py           # Resume parsing module
 ├── extract_resumes.py         # Resume extraction script
@@ -30,6 +39,8 @@ This project implements a custom NER model trained on resume data to extract rel
 ├── setup.py                   # Setup script
 └── README.md                  # This file
 ```
+
+**Note:** The `resumes/` folder is not included in this repository for privacy reasons. You need to provide your own resume dataset to train or test the model.
 
 ## Installation
 
@@ -56,6 +67,12 @@ python setup.py install
 ```
 
 ## Usage
+
+### Preparing Your Dataset
+
+1. Create a `resumes/` folder in the project root
+2. Add your resume PDF files to this folder
+3. The folder is git-ignored for privacy
 
 ### Training a Custom NER Model
 
@@ -94,6 +111,8 @@ The trained model is located in `resume_ner_model/` and includes:
 - Tokenizer configuration
 - Vocabulary and vectors
 
+**Note:** This pre-trained model is specific to the dataset it was trained on. For best results with your own resumes, retrain the model using your data and the provided training scripts.
+
 ## Data Format
 
 Training data is provided in `training_data.json` with the following format:
@@ -128,7 +147,8 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## Acknowledgments
 
 - Built with [spaCy](https://spacy.io/)
-- Resume data processed and annotated
+- This project demonstrates custom NER training for resume parsing
+- Dataset not included - users must provide their own resume data
 
 ## Contact
 
