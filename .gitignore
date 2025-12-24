@@ -47,6 +47,13 @@ htmlcov/
 *.bin
 *.model
 
+# Resumes and sensitive data
+resumes/
+*.pdf
+extracted_resumes.json
+parsed_resumes.json
+*.png
+
 # Temporary files
 *.tmp
 *.temp
